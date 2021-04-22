@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import movies from "../../moviedata";
 
@@ -30,10 +29,12 @@ function Detail() {
             <img src="/images/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
-          <Trailer>
-            <img src="/images/play-icon-white.png" alt="" />
-            <span>Trailer</span>
-          </Trailer>
+          <a href={detailData.ytLink} target="_blank" rel="noreferrer">
+            <Trailer>
+              <img src="/images/play-icon-white.png" alt="" />
+              <span>Trailer</span>
+            </Trailer>
+          </a>
           <AddList>
             <span />
             <span />

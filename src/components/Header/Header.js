@@ -54,14 +54,13 @@ function Header() {
 
   return (
     <Nav>
-      <Logo>
-        <img src="/images/logo.svg" alt="Disney+" />
-      </Logo>
-
       {!userName ? (
         <Login onClick={handleAuth}>Login</Login>
       ) : (
         <>
+          <Logo>
+            <img src="/images/logo.svg" alt="Disney+" />
+          </Logo>
           <NavMenu>
             <Link to="/home">
               <img src="/images/home-icon.svg" alt="HOME" />
@@ -160,12 +159,13 @@ const NavMenu = styled.div`
     span {
       color: rgb(249, 249, 249);
       font-size: 13px;
-      letter-spacing: 1.42px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
       line-height: 1.08;
       padding: 2px 0px;
       white-space: nowrap;
       position: relative;
-      margin-left: 10px;
+      margin-left: 5px;
 
       &:before {
         background-color: rgb(249, 249, 249);
@@ -205,6 +205,8 @@ const Login = styled.a`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   transition: all 0.2s ease 0s;
+  position: absolute;
+  right: 25px;
   &:hover {
     background-color: #f9f9f9;
     color: #000;
